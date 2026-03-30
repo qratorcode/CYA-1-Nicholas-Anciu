@@ -25,4 +25,26 @@ css linter used to perform static code analysis.
 
     (Here is the code/documentation I wrote if you were unable to find it in the repo)
 
+
+    
+## Message arguments
+
+This rule supports the following message arguments:
+
+- `property`: the disallowed property name
+- `value`: the disallowed value
+
+For example:
+```js
+[
+  {
+    "font-weight": ["normal", "bold"],
+    "font-style": ["italic", "oblique"]
+  },
+  {
+    message: (property, value) => `Unexpected value "${value}" for property "${property}"`
+  }
+]
+```
+
     
